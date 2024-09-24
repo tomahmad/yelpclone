@@ -8,20 +8,8 @@ const { isAuthorReview } = require("../middleware/isAuthor");
 const ReviewController = require("../controllers/reviews");
 const { validateReview } = require("../middleware/validator");
 
-router.post(
-  "/",
-  isAuth,
-  isValidObjectId("/places"),
-  validateReview,
-  wrapAsync(ReviewController.store)
-);
+router.post("/", isAuth, isValidObjectId("/places"), validateReview, wrapAsync(ReviewController.store));
 
-router.delete(
-  "/:review_id",
-  isAuth,
-  isAuthorReview,
-  isValidObjectId("/places"),
-  wrapAsync(ReviewController.destroy)
-);
+router.delete("/:review_id", isAuth, isAuthorReview, isValidObjectId("/places"), wrapAsync(ReviewController.destroy));
 
 module.exports = router;

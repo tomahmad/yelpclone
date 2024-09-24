@@ -5,10 +5,7 @@ const wrapAsync = require("../utils/wrapAsync");
 const passport = require("passport");
 const AuthController = require("../controllers/auth");
 
-router
-  .route("/register")
-  .get(AuthController.registerForm)
-  .post(wrapAsync(AuthController.register));
+router.route("/register").get(AuthController.registerForm).post(wrapAsync(AuthController.register));
 
 router
   .route("/login")

@@ -7,11 +7,7 @@
   <div class="card mb-3">
     <div class="row">
       <div class="col-md-4">
-        <img
-          src="<%= place.image %>"
-          alt="<%= place.title %>"
-          class="img-fluid"
-        />
+        <img src="<%= place.image %>" alt="<%= place.title %>" class="img-fluid" />
       </div>
       <div class="col-md-8 my-3">
         <h5 class="card-title"><%= place.title %></h5>
@@ -19,9 +15,7 @@
         <p class="card-text">
           <small class="text-secondary"><%= place.location %></small>
         </p>
-        <a href="/places/<%= place._id %>" class="btn btn-primary"
-          >View <%= place.title %></a
-        >
+        <a href="/places/<%= place._id %>" class="btn btn-primary">View <%= place.title %></a>
       </div>
     </div>
   </div>

@@ -2,58 +2,29 @@
 
 <h1 class="text-center">Add Places</h1>
 <div class="col-6 offset-3">
-  <form action="/places" method="POST" class="validated-form" novalidate>
+  <form action="/places" method="POST" class="validated-form" novalidate enctype="multipart/form-data">
     <div class="mb-3">
       <label for="title" class="form-label">Title</label>
-      <input
-        type="text"
-        name="place[title]"
-        id="title"
-        class="form-control"
-        required
-      />
+      <input type="text" name="place[title]" id="title" class="form-control" required />
       <div class="valid-feedback">Looks good..</div>
       <div class="invalid-feedback">Judul tidak boleh kosong..</div>
     </div>
 
     <div class="mb-3">
       <label for="location" class="form-label">Location</label>
-      <input
-        type="text"
-        name="place[location]"
-        id="location"
-        class="form-control"
-        required
-      />
+      <input type="text" name="place[location]" id="location" class="form-control" required />
     </div>
     <div class="mb-3">
       <label for="description" class="form-label">Description</label>
-      <textarea
-        name="place[description]"
-        id="description"
-        class="form-control"
-        required
-      ></textarea>
+      <textarea name="place[description]" id="description" class="form-control" required></textarea>
     </div>
     <div class="mb-3">
       <label for="price" class="form-label">Price</label>
-      <input
-        type="text"
-        name="place[price]"
-        id="price"
-        class="form-control"
-        required
-      />
+      <input type="text" name="place[price]" id="price" class="form-control" required />
     </div>
     <div class="mb-3">
-      <label for="image" class="form-label">Image Url</label>
-      <input
-        type="text"
-        name="place[image]"
-        id="image"
-        class="form-control"
-        required
-      />
+      <label for="image" class="form-label">Image</label>
+      <input type="file" name="image" id="image" accept="image/*" class="form-control" multiple required />
     </div>
     <button type="submit" class="btn btn-success">Save</button>
   </form>
