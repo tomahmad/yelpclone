@@ -14,8 +14,10 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><%= place.location %></li>
+        <li class="list-group-item">Author : <%= place.author.username %></li>
         <li class="list-group-item"><%= place.price %></li>
       </ul>
+      <% if(currentUser && place.author.equals(currentUser._id)) { %>
       <div class="card-body">
         <a
           href="/places/<%= place._id %>/edit"
@@ -30,6 +32,7 @@
           <button class="btn btn-danger">Delete</button>
         </form>
       </div>
+      <% } %>
     </div>
   </div>
   <div class="col-6">
